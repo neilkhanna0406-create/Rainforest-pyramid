@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rainforest Energy Pyramid</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Lato', sans-serif;
+  background: #0d1f0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.wrap {
+  width: 100%;
+  max-width: 700px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 32px;
+  text-align: center;
+}
+.pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+.level {
+  display: flex;
+  align-items: stretch;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.level-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  flex: 1;
+  gap: 4px;
+}
+.level-role {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.65;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.level-orgs {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+.level-side {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+  gap: 3px;
+}
+.side-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.side-pct {
+  font-size: 10px;
+  color: rgba(255,255,255,0.55);
+}
+.loss {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.35);
+  font-size: 11px;
+}
+.loss-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+.loss-pill {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 3px 12px;
+  white-space: nowrap;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">Rainforest Energy Pyramid</div>
+  <div class="sub">Energy in kcal/m²/yr · 90% lost as heat between each level</div>
+
+  <div class="pyramid">
+
+    <div class="level" style="width:26%;min-width:230px;background:#7f1d1d;">
+      <div class="level-main">
+        <span class="level-role" style="color:rgba(255,200,200,0.7)">Tertiary consumers</span>
+        <span class="level-orgs">Jaguar · Harpy eagle</span>
+      </div>
+      <div class="level-side">
+        <span class="side-val">10 kcal</span>
+        <span class="side-pct">0.1% of base energy</span>
+      </div>
+    </div>
+
+    <div class="loss" style="width:42%;min-width:240px;">
+      <div class="loss-line"></div>
+      <div class="loss-pill">↓ 90 kcal lost</div>
+      <div class="loss-line"></div>
+    </div>
+
+    <div class="level" style="width:48%;min-width:250px;background:#92400e;">
+      <div class="level-main">
+        <span class="level-role" style="color:rgba(255,220,150,0.7)">Secondary consumers</span>
+        <span class="level-orgs">Boa constrictor · Spider monkey</span>
+      </div>
+      <div class="level-side">
+        <span class="side-val">100 kcal</span>
+        <span class="side-pct">1% of base energy</span>
+      </div>
+    </div>
+
+    <div class="loss" style="width:62%;min-width:260px;">
+      <div class="loss-line"></div>
+      <div class="loss-pill">↓ 900 kcal lost</div>
+      <div class="loss-line"></div>
+    </div>
+
+    <div class="level" style="width:68%;min-width:270px;background:#14532d;">
+      <div class="level-main">
+        <span class="level-role" style="color:rgba(180,255,180,0.6)">Primary consumers</span>
+        <span class="level-orgs">Capybara · Sloth · Toucan · Leaf-cutter ant</span>
+      </div>
+      <div class="level-side">
+        <span class="side-val">1,000 kcal</span>
+        <span class="side-pct">10% of base energy</span>
+      </div>
+    </div>
+
+    <div class="loss" style="width:82%;min-width:280px;">
+      <div class="loss-line"></div>
+      <div class="loss-pill">↓ 9,000 kcal lost</div>
+      <div class="loss-line"></div>
+    </div>
+
+    <div class="level" style="width:88%;min-width:290px;background:#064e3b;">
+      <div class="level-main">
+        <span class="level-role" style="color:rgba(150,255,200,0.6)">Producers</span>
+        <span class="level-orgs">Kapok tree · Bromeliad · Banana tree · Ferns</span>
+      </div>
+      <div class="level-side">
+        <span class="side-val">10,000 kcal</span>
+        <span class="side-pct">100% — base energy</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
